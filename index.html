@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  * {box-sizing: border-box}
+  * {font-family: "Courier"}
+
+  /* Set height of body and the document to 100% */
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family:"Courier";
+  }
+
+  /* Style tab links */
+  .tablink {
+    background-color: Snow;
+    color: slategray;
+    font-family: Courier;
+    float: left;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+  }
+
+  .tablink:hover {
+    background-color: #777;
+
+  }
+
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: slategray;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+    font-family: Courier;
+  }
+  #Home {background-color: Snow;}
+  #New {background-color: beige;}
+  #Los {background-color: Aliceblue;}
+  #DC {background-color: Honeydew;}
+  #Miami {background-color: Snow;}
+  #Chicago {background-color: Honeydew;}
+  </style>
+  </head>
+<head>
+
+<script>
+  function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+
+  </script>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'Snow')"  id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('New', this, 'beige')">New York City</button>
+<button class="tablink" onclick="openPage('Los', this, 'Aliceblue')">Los Angeles</button>
+<button class="tablink" onclick="openPage('DC', this, 'Honeydew')">Washington DC</button>
+<button class="tablink" onclick="openPage('Miami', this, 'seashell')">Miami</button>
+
+
+<div id="Home" class="tabcontent">
+  <head>
+  <h1><center>INSTAFOOD</center></h1>
+  <center><img src="https://data.whicdn.com/images/301834027/original.gif"> <!-- width="1000" height="600"--></center>
+<p><center>
+  Welcome to Instafood! The website presents you with restaurants that you see on your Instagram feed! Have you ever wanted
+  to have the same experieces as you see on Instagram? Then don't worry this website is just for you. Me, Meher Bhohi, and
+  my partner, Marie-Elizabeh Kabeya got this idea when we were trying to find a restaurant where the food would be amazing and we
+  could take great photos. That is why we created this process easier for you by creating a website with the restaurants that do both.
+  Click through the tabs to find restraunts where you can take photogenic photos and eat delious food in the most popular cities in The United States.
+</p></center>
+<p><center><p style= color:white>
+kafhioshohisihirhiljhhdihdi
+hghohgihdihihi
+</p><center>
+
+</div>
+
+<div id="New" class="tabcontent">
+  <h1><center>New York City</center></h1>
+  <h3><center>New York City Tourist Food</center></h3>
+  <p><center>Delicous Food from the Big Apple</center></p>
+  <div id= "googleMap" style= "width:1000px;height:50px;"></div>
+  <script>
+  function myMap() {
+    var mapProp ={
+      center:new google.maps.Lating(40.6971494,-74.2598655),
+      zoom:5,
+    }
+    var map= new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  }
+</script >
+
+  <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30606552126!2d-74.25987474990674!3d40.69714939692116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY!5e0!3m2!1sen!2sus!4v1564666711831!5m2!1sen!2sus" width="1020" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+  <p>
+  <center><a href="https://www.taiyankinyc.com/">Taiyaki</a></center>
+  <address>
+    <center><p style="font-size:18px;">119 Baxter Street,Manhattan,New York, New York, 10013, USA</p></center>
+  </address>
+  </p>
+  <p>
+    <center><a href="https://www.twohandsnyc.com/">Two Hands</a></center>
+    <address>
+      <center><p style="font-size:18px;">164 Mott Street,Manhattan, New York, New York, 10013, USA</p></center>
+    </address>
+  </p>
+  <p>
+    <center><a href="https://www.robertaspizza.com/">Roberta's</a></center>
+    <address>
+      <center><p style="font-size:18px;"> 261 Moore Street, East Williamsburg, Brooklyn, New York, 11206, USA </p></center>
+    </address>
+  </p>
+  <p>
+    <center><a href="https://www.ivanramen.com">Ivan Ramen</a></center>
+    <address><p style="font-size:18px;"> 25 Clinton Street, Manhattan, New York, New York, 10002,USA</p></center>
+    </address>
+  </p>
+  <p>
+    <center><a href="https://www.shakeshack.com">Shake Shack</a></center>
+    <address>
+      <center><p style="font-size:18px;">East 23rd Street,Manhattan,New York, New York,10010, USA</p></center>
+  </address>
+  </p>
+  <p>
+    <center><a href="https://www.emmysquared.com">Emmy Squared</a></center>
+    <address>
+      <center><p style="font-size:18px;">364 Grand Street, Williamsburg, New York, 11211, USA</p></center>
+    </address>
+  </p>
+  <p>
+  <center><a href="https://www.iceandvice.com">Ice & Vice</a></center>
+  <address>
+    <center> <p style="font-size:18px;">221 East Broadway, Manhattan, New York, New York,10002, USA</p></center>
+  </address>
+  </p>
+  <p>
+    <center><a href="https://www.tacombi.com/">Tacombi</a></center>
+    <address>
+      <center><p style="font-size:18px;">255 Bleecker Street, Manhattan, New York, New York,10014,USA</p></center>
+    </address>
+  </p>
+  <p>
+    <center><a href="https://www.blackseedbagels.com">Black Seed Bagels</a></center>
+    <address>
+      <center><p style="font-size:18px;">170 Elizabeth Street, Manhattan, New York, New York, 10012,USA</p></center>
+    </address>
+  </p>
+  <p>
+    <center><a href="https://www.okonomibk.com/home">Okonomi</a></center>
+    <address>
+      <center><p style="font-size:18px;">150 Ainslie Street,Williamsburg,New York, New York,11211,USA</p></center>
+    </address>
+  </p>
+
+</div>
+
+<div id="Los" class="tabcontent">
+<h1><center>Los Angeles</h1></center>
+  <h3><center>Los Angeles Culture Splash</center></h3>
+  <p><center>A splash of home in your mouth in the city of angels</center></p>
+  <script>
+  function myMap() {
+  var mapProp= {
+    center:new google.maps.LatLng(34.0201613,-118.6919306),
+    zoom:5,};
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  }
+  </script>
+<center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.2741722871!2d-118.69193060659121!3d34.02016128355627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos+Angeles%2C+CA!5e0!3m2!1sen!2sus!4v1564581775233!5m2!1sen!2sus" width="1095" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </center>
+  <body>
+  </body>
+<p>
+  <center><p style="font-size:30px;"><a href="https://dudleymarketvenice.com">Dudley Market</a></center>
+  <address>
+    <center>9 Dudley Ave Venice, CA 90291</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://www.ytvenice.com">Yours Truly</a></center>
+  <address>
+    <center>1616 Abbot Kinney Blvd, Venice CA 90291, United States</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://la.eater.com/2018/11/26/18105136/mizlala-mediterranean-sherman-oaks-west-adams-expansion">Mizlala West Adams</a></center>
+  <address>
+    <center>5400 W Adams Blvd Los Angeles, CA 90016</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://damicheleusa.com">L’Antica Pizzeria da Michele</a></center>
+  <address>
+    <center>1534 N McCadden Pl Los Angeles, CA 90028</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://www.pizzeriaantico.ca">Antico</a></center>
+  <address>
+    <center>4653 Beverly Blvd Los Angeles, CA 90004</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://www.fiveleavesla.com">Five Leaves LA</a></center>
+  <address>
+    <center>4845 Fountain Ave Los Angeles, CA 90029</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://www.tacos1986.com">Tacos 1986</a></center>
+  <address>
+    <center>609 S Spring St Los Angeles, CA 90014</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://bontempsla.com">Bon Temps</a></center>
+  <address>
+    <center>712 S Santa Fe Ave Los Angeles, CA 90021</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://www.dearjohnsbar.com">Dear John's</a></center>
+  <address>
+    <center>11208 Culver Blvd Culver City, CA 90230</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://www.kassiclub.com">Kassi Club</a></center>
+  <address>
+    <center>8422 W 3rd St Los Angeles, CA 90048</center>
+  </address>
+  </p>
+</div>
+
+<div id="DC" class="tabcontent">
+  <h1><center>Washington, D.C.</center></h1>
+  <h3><center>Washington D.C. Cusine</center></h3>
+  <p><center>Come on down to the Nation's Captial</center></p>
+  <body>
+  <div id="googleMap" style="width:1000px;height:50px;"></div>
+  <script>
+  function myMap() {
+  var mapProp= {
+    center:new google.maps.LatLng(38.8935128,-77.1546626),
+    zoom:5,
+  };
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  }
+  </script>
+
+  <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198741.27545651005!2d-77.15466261271722!3d38.89351276081526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c6de5af6e45b%3A0xc2524522d4885d2a!2sWashington%2C+DC!5e0!3m2!1sen!2sus!4v1564506433357!5m2!1sen!2sus" width="1095" height="500" frameborder="0" style="border:0" allowfullscreen></iframe></center>
+
+  </body>
+  </html>
+  <head>
+    <link rel="stylesheet" href="searchpage.css"
+  </head>
+
+  <p>
+  <center><p style="font-size:30px;"><a href="https://lavie-dc.com/">La Vie</a></center>
+  <address>
+  <center>88 District Square SW, 5th Floor, Washington DC, DC 20024-2491</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://www.delmardc.com">Del Mar de Fabio Trabocchi</a></center>
+  <address>
+  <center>791 Wharf St SW, Washington DC, DC 20024-3433</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://www.saxwdc.com/">Sax</a></center>
+  <address>
+  <center>734 11th St NW, Washington, DC 20001</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://alabardero.com">Taberna del Alabardero</a></center>
+  <address>
+  <center>1776 I St. NW, Washington DC</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://mirabelledc.com">Mirabelle</a></center>
+  <address>
+  <center>900 16th Street NW, Washington DC</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://www.tigerforkdc.com">Tiger Fork</a></center>
+  <address>
+  <center>922 N Street NW Washington DC</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://www.zaytinya.com">Zaytinya</a></center>
+  <address>
+  <center>701 9th St NW Washington, DC 20001</center>
+  </address>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://www.jaleo.com">Jaleo</a></center>
+  <address>
+  <center>480 7th Street NW Washington, DC 20004</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://www.masseria-dc.com">Masseria</a></center>
+  <address>
+  <center>1340 4th St NE Washington, DC 20002</center>
+  </address>
+  </p>
+  <p>
+  <center><p style="font-size:30px;"><a href="https://www.thewatergatehotel.com/washington-dc-restaurant-kingbird">Kingbird</a></center>
+  <address>
+  <center>2650 Virginia Ave NW, The Watergate Hotel, Washington DC, DC 20037-1906</center>
+  </address>
+  </p>
+
+</div>
+
+<div id="Miami" class="tabcontent">
+  <h1><center>Miami</h1></center>
+  <backgroundColor= seashell;>
+  <div id= "googleMap" style= "width:1000px;height:50px;"></div>
+  <script>
+  function myMap() {
+    var mapProp ={
+      center:new google.maps.Lating(25.7825453,-80.2994999),
+      zoom:5,
+    }
+    var map= new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  }
+  </script>
+
+  <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114964.38943585503!2d-80.29949985685623!3d25.782545313315854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C+FL!5e0!3m2!1sen!2sus!4v1564767211797!5m2!1sen!2sus" width="1020" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <p>
+    <center><a href="https://chotu.com/">Cho:Tu</a></center>
+    <address>
+      <center><p style="font-size:18px;">3252 Ne 1st ave, Suite 111, Miami FL 33137</p></center>
+    </address>
+    </p>
+    <p>
+      <center><a href="https://foodcommagroup.com/restaurants/la-placita-miami/">La Placita</a></center>
+      <address>
+        <center><p style="font-size:18px;">6789 Biscayne Blvd, Miami, FL 33138, USA</p></center>
+      </address>
+    </p>
+    <p>
+      <center><a href="www.charlysvegantacos.com">Charly's Vegan Tacos</a></center>
+      <address>
+        <center><p style="font-size:18px;">172 NW 24th Street, Miami, FL 33127</p></center>
+      </address>
+    </p>
+    <p>
+      <center><a href="https://caja-caliente.com">Caja Calinete</a></center>
+      <address><p style="font-size:18px;">2634 NE 2nd Ave, Miami, FL 33137</p></center>
+      </address>
+    </p>
+    <p>
+      <center><a href="https://embermiami.com/">Ember</a></center>
+      <address>
+        <center><p style="font-size:18px;">151 NE 41st, Unit 117 Miami, FL 33137</p></center>
+    </address>
+    </p>
+    <p>
+      <center><a href="https://www.laidfresh.com">Laid Fresh</a></center>
+      <address>
+        <center><p style="font-size:18px;">250 NW 24TH STREET, MIAMI, FL 33127</p></center>
+      </address>
+    </p>
+    <p>
+    <center><a href="https://www.versaillesrestaurant.com">Versailles</a></center>
+    <address>
+      <center> <p style="font-size:18px;">3555 SW 8TH STREET, MIAMI FLORIDA 33135</p></center>
+    </address>
+    </p>
+    <p>
+      <center><a href="https://www.novikov-restaurants.com/">Novikov</a></center>
+      <address>
+        <center><p style="font-size:18px;">300 South Biscayne Boulevard Miami, FL 33131</p></center>
+      </address>
+    </p>
+    <p>
+      <center><a href="https://gheemiami.com">Ghee</a></center>
+      <address>
+        <center><p style="font-size:18px;">3620 NE 2nd Ave, Miami, FL 33137</p></center>
+      </address>
+    </p>
+    <p>
+      <center><a href="https://chotto-matte.com/miami/">Choto-Miami</a></center>
+      <address>
+        <center><p style="font-size:18px;">1664 Lenox Avenue Miami Beach FL</p></center>
+      </address>
+    </p>
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>
